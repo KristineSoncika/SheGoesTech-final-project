@@ -1,0 +1,214 @@
+/* ===Global Styles=== */
+
+:root {
+  --cl-bg-dark: rgb(20, 11, 10);
+  --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
+  --cl-bg-medium: rgb(226, 174, 119);
+  --cl-bg-light: rgb(238, 199, 148);
+  --cl-blue: rgb(65, 105, 224);
+  --cl-blue-op: rgb(65, 105, 224, 0.7);
+  --cl-font-dark: rgb(19, 19, 19);
+  --cl-font-light: rgb(53, 53, 53);
+  --cl-font-contrast-dark: rgb(158, 115, 69);
+  --cl-font-contrast-light: rgb(226, 174, 119);
+  --cl-white: rgb(255, 255, 255);
+  --font-main: "Titillium Web", sans-serif;
+  --font-special: "Dosis", sans-serif;
+  --transition: all 0.5s;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--cl-font-light);
+}
+
+h1,
+h2 {
+  font-family: var(--font-special);
+  color: var(--cl-font-dark);
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--cl-font-contrast-light);
+  opacity: 60%;
+}
+
+a {
+  color: var(--cl-font-contrast-light);
+}
+
+a:hover {
+  color: var(--cl-blue);
+}
+
+button {
+  border: none;
+}
+
+/* ===Components=== */
+
+/* Buttons */
+.btn-custom {
+  background-color: var(--cl-blue);
+  text-decoration: none;
+  color: var(--cl-white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.btn-custom:hover {
+  transition: var(--transition);
+  background-color: var(--cl-bg-light);
+  color: var(--cl-font-dark);
+}
+
+/* Backgounds */
+.bg-color-light {
+  background-color: var(--cl-bg-light);
+}
+
+.bg-color-dark {
+  background-color: var(--cl-bg-dark);
+  color: var(--cl-font-contrast-light);
+}
+
+/* Blue-span */
+.cl-blue {
+  color: var(--cl-blue);
+}
+
+/* ===Navbar=== */
+
+.logo {
+  width: 130px;
+}
+
+.navbar-custom {
+  background-color: var(--cl-bg-dark);
+}
+
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+  color: var(--cl-font-contrast-light);
+}
+
+/* change the color of hovered links */
+.navbar-custom .nav-item:hover .nav-link {
+  color: var(--cl-blue);
+}
+
+/* change the color of toggler icon */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(226,174,119)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* ===Hero=== */
+.hero {
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: -71.07px;
+}
+
+.hero h1,
+.hero p {
+  color: var(--cl-font-contrast-light);
+}
+
+.bg-custom {
+  background-color: var(--cl-bg-dark-transp);
+}
+
+/* ===News-Collection-Join=== */
+
+.news-coll-join div {
+  height: 300px;
+  cursor: pointer;
+}
+
+.news-coll-join h2,
+.news-coll-join p {
+  color: var(--cl-white);
+}
+
+.news-coll-join h2 {
+  font-size: 3rem;
+}
+
+.news {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/news.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.collection {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/collection.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: 1px solid var(--cl-white);
+  border-bottom: 1px solid var(--cl-white);
+}
+
+@media only screen and (min-width: 992px) {
+  .collection {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid var(--cl-white);
+    border-right: 1px solid var(--cl-white);
+  }
+}
+
+.join {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/join.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ===Featured Books=== */
+
+.carousel-item img {
+  max-width: 300px;
+  cursor: pointer;
+}
+
+/* ===Footer=== */
+
+.footer h2 {
+  color: var(--cl-font-contrast-light);
+}
+
+.logo-small {
+  width: 60px;
+  margin-left: -10px;
+}
+
+/* ===About Us=== */
+
+/* ===Books=== */
+
+/* ===Contact=== */
