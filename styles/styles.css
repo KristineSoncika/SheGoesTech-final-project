@@ -6,7 +6,7 @@
   --cl-bg-medium: rgb(226, 174, 119);
   --cl-bg-light: rgb(238, 199, 148);
   --cl-blue: rgb(65, 105, 224);
-  --cl-blue-op: rgb(65, 105, 224, 0.7);
+  --cl-blue-op: rgb(65, 105, 224, 0.6);
   --cl-font-dark: rgb(19, 19, 19);
   --cl-font-light: rgb(53, 53, 53);
   --cl-font-contrast-dark: rgb(158, 115, 69);
@@ -15,6 +15,13 @@
   --font-main: "Titillium Web", sans-serif;
   --font-special: "Dosis", sans-serif;
   --transition: all 0.5s;
+  --trasition-slow: all 0.8s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -54,17 +61,56 @@ button {
 
 /* Buttons */
 .btn-custom {
-  background-color: var(--cl-blue);
   text-decoration: none;
-  color: var(--cl-white);
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: none;
 }
 
-.btn-custom:hover {
+.btn-custom {
   transition: var(--transition);
+}
+
+.btn-blue {
+  background-color: var(--cl-blue);
+  color: var(--cl-white);
+}
+
+.btn-blue:hover {
   background-color: var(--cl-bg-light);
   color: var(--cl-font-dark);
+}
+
+.btn-dark {
+  background-color: var(--cl-font-dark);
+  color: var(--cl-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--cl-font-contrast-dark);
+}
+
+.btn-light {
+  background-color: var(--cl-white);
+  color: var(--cl-font-dark);
+}
+
+.btn-light:hover {
+  background-color: var(--cl-bg-light);
+}
+
+.to-top {
+  display: none;
+  position: fixed;
+  color: var(--cl-blue);
+  font-size: 3rem;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+}
+
+.to-top:hover {
+  color: var(--cl-font-contrast-dark);
 }
 
 /* Backgounds */
@@ -128,9 +174,8 @@ button {
 
 /* ===News-Collection-Join=== */
 
-.news-coll-join div {
-  height: 300px;
-  cursor: pointer;
+.news-coll-join > div {
+  height: 400px;
 }
 
 .news-coll-join h2,
@@ -151,7 +196,7 @@ button {
     url("../images/news.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 .collection {
@@ -168,15 +213,6 @@ button {
   border-bottom: 1px solid var(--cl-white);
 }
 
-@media only screen and (min-width: 992px) {
-  .collection {
-    border-top: none;
-    border-bottom: none;
-    border-left: 1px solid var(--cl-white);
-    border-right: 1px solid var(--cl-white);
-  }
-}
-
 .join {
   background-image: linear-gradient(
       to top,
@@ -187,6 +223,41 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media only screen and (min-width: 992px) {
+  .collection {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid var(--cl-white);
+    border-right: 1px solid var(--cl-white);
+  }
+}
+
+/* Adds the text overlay */
+
+.overlay-home {
+  overflow: scroll;
+  position: absolute;
+  height: 0;
+  bottom: 100%;
+  transition: var(--trasition-slow);
+}
+
+.news:hover .overlay-home {
+  bottom: 0;
+  height: 100%;
+}
+
+.overlay-home-hide {
+  overflow: hidden;
+  position: absolute;
+  transform: scale(1);
+  transition: var(--transition);
+}
+
+.news:hover .overlay-home-hide {
+  transform: scale(0);
 }
 
 /* ===Featured Books=== */
