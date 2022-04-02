@@ -32,6 +32,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <nav class="navbar sticky-top navbar-expand-md navbar-custom">
@@ -96,14 +102,19 @@
               friends over a cup of coffee or speciality tea. We welcome new
               members and there are plenty of opportunities to visit us.
             </p>
-            <a href="./about.html" role="button" class="btn btn-custom p-2 mt-2"
-              >More</a
+            <a
+              href="./about.html"
+              role="button"
+              class="btn btn-custom btn-blue p-2 mt-2"
+              >Read More</a
             >
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-9 col-xl-7 mx-auto my-5 py-5 text-center text-lg-start">
+        <div
+          class="col-9 col-xl-7 mx-auto my-5 py-5 text-center text-lg-start offer"
+        >
           <h2 class="text-uppercase mb-4 fw-bold">What we offer</h2>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
@@ -119,27 +130,83 @@
             facilis ex dolore cupiditate nemo quibusdam vero aliquid ipsam
             aspernatur.
           </p>
+          <p>
+            Neque consequuntur corporis perspiciatis, accusamus laudantium amet
+            magni sit sapiente quidem tenetur maxime commodi tempore officia
+            molestiae sint fugiat culpa ex adipisci, est suscipit! Reprehenderit
+            explicabo minima iure sunt dolorum facere!
+          </p>
         </div>
       </div>
       <div class="row news-coll-join">
         <div
-          class="col-12 col-lg-4 text-center d-flex flex-column justify-content-lg-end justify-content-center news"
+          class="col-12 col-lg-4 text-center news position-relative d-flex justify-content-center align-items-end"
         >
-          <h2 class="text-uppercase">News</h2>
-          <p class="mb-5">What’s happening at the library?</p>
+          <div
+            class="d-flex flex-column justify-content-lg-end justify-content-center align-items-center overlay-home-hide"
+          >
+            <h2 class="text-uppercase">News</h2>
+            <p class="mb-5">What’s happening at the library?</p>
+          </div>
+          <div
+            class="overlay-home d-flex flex-column justify-content-center align-items-center"
+          >
+            <p class="col-9 col-lg-11">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus ea, saepe cum libero numquam, ullam nam laudantium
+              porro iure iusto culpa facilis cumque. Mollitia cum, eius officia
+              ab expedita accusamus!
+            </p>
+            <a href="#" role="button" class="btn p-2 btn-custom btn-light mb-2"
+              >Read More</a
+            >
+          </div>
         </div>
-
         <div
-          class="col-12 col-lg-4 text-center d-flex flex-column justify-content-lg-end justify-content-center collection"
+          class="col-12 col-lg-4 text-center news position-relative d-flex justify-content-center align-items-end collection"
         >
-          <h2 class="text-uppercase">Collection</h2>
-          <p class="mb-5">Explore our huge range of books</p>
+          <div
+            class="d-flex flex-column justify-content-lg-end justify-content-center overlay-home-hide"
+          >
+            <h2 class="text-uppercase">Collection</h2>
+            <p class="mb-5">Explore our huge range of books</p>
+          </div>
+          <div
+            class="overlay-home d-flex flex-column justify-content-center align-items-center"
+          >
+            <p class="col-9 col-lg-11">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus ea, saepe cum libero numquam, ullam nam laudantium
+              porro iure iusto culpa facilis cumque. Mollitia cum, eius officia
+              ab expedita accusamus!
+            </p>
+            <a href="#" role="button" class="btn p-2 btn-custom btn-light mb-2"
+              >Read More</a
+            >
+          </div>
         </div>
         <div
-          class="col-12 col-lg-4 text-center d-flex flex-column justify-content-lg-end justify-content-center join"
+          class="col-12 col-lg-4 text-center news position-relative d-flex justify-content-center align-items-end collection join"
         >
-          <h2 class="text-uppercase">Join</h2>
-          <p class="mb-5">Want to become a member?</p>
+          <div
+            class="text-center d-flex flex-column justify-content-lg-end justify-content-center overlay-home-hide"
+          >
+            <h2 class="text-uppercase">Join</h2>
+            <p class="mb-5">Want to become a member?</p>
+          </div>
+          <div
+            class="overlay-home d-flex flex-column justify-content-center align-items-center"
+          >
+            <p class="col-9 col-lg-11">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Necessitatibus ea, saepe cum libero numquam, ullam nam laudantium
+              porro iure iusto culpa facilis cumque. Mollitia cum, eius officia
+              ab expedita accusamus!
+            </p>
+            <a href="#" role="button" class="btn p-2 btn-custom btn-light mb-2"
+              >Read More</a
+            >
+          </div>
         </div>
       </div>
       <div class="row bg-color-light">
@@ -170,7 +237,7 @@
                   <img
                     src="./images/book-1.jpg"
                     class="mx-auto w-50 d-block"
-                    alt="..."
+                    alt="book cover image"
                 /></a>
               </div>
               <div class="carousel-item">
@@ -178,7 +245,7 @@
                   <img
                     src="./images/book-2.jpeg"
                     class="mx-auto w-50 d-block"
-                    alt="..."
+                    alt="book cover image"
                 /></a>
               </div>
               <div class="carousel-item">
@@ -186,7 +253,7 @@
                   <img
                     src="./images/book-3.png"
                     class="mx-auto w-50 d-block"
-                    alt="..."
+                    alt="book cover image"
                 /></a>
               </div>
               <div class="carousel-item">
@@ -194,7 +261,7 @@
                   <img
                     src="./images/book-4.jpeg"
                     class="mx-auto w-50 d-block"
-                    alt="..."
+                    alt="book cover image"
                 /></a>
               </div>
             </div>
