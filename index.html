@@ -32,11 +32,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
+
+    <!-- jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+
+    <!-- JS -->
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -91,11 +95,11 @@
               Welcome to <span class="cl-blue">Barry Blue Books</span>
             </h1>
             <p class="text-center text-md-end fs-5 w-100 d-none d-sm-block">
-              Barry Blue Books, founded in 2005, is an independent library
-              situated in the centre of Riga. It houses nearly 20,000 books and
-              has a tranquil and relaxed atmosphere. In addition to the several
-              cozy reading rooms, there is a beautiful garden, which is a
-              wonderful hideout in the warm season.
+              Barry Blue Books, founded in 2005, is an independent lending
+              library situated in the centre of Riga. It houses nearly 20,000
+              books and has a tranquil and relaxed atmosphere. In addition to
+              the several cozy reading rooms, there is a beautiful garden, which
+              is a wonderful hideout in the warm season.
             </p>
             <p class="text-center text-md-end fs-5 w-100 d-none d-lg-block">
               The library is a great place to relax, read a book and meet
@@ -226,6 +230,12 @@
             exercitationem, voluptas perspiciatis temporibus ea aliquam facilis
             ipsum excepturi nemo! Tempore culpa dolorum corporis.
           </p>
+          <a
+            href="./books.html"
+            role="button"
+            class="btn btn-custom btn-dark p-2 mt-2"
+            >Reserve</a
+          >
           <div
             id="newAdditions"
             class="carousel carousel-dark slide pt-5"
@@ -294,10 +304,10 @@
       </div>
       <div class="row bg-color-dark footer" role="contentinfo">
         <div
-          class="col-9 col-md-11 col-lg-9 mx-auto my-5 d-flex flex-column align-items-start align-items-md-center"
+          class="col-9 col-md-11 col-lg-9 mx-auto my-5 d-flex flex-column align-items-center"
         >
           <div
-            class="w-100 d-flex flex-column flex-md-row align-items-start justify-content-md-around my-4"
+            class="w-100 d-flex flex-column flex-md-row align-items-center justify-content-md-around my-4 text-center text-md-start"
           >
             <div class="mb-4">
               <h2 class="pb-2 text-uppercase">We are Open</h2>
@@ -332,12 +342,15 @@
             </div>
           </div>
           <hr class="w-100 mx-auto" />
-          <div class="pb-3">
+          <div class="pb-3 text-center">
             <small>&copy; Barry Blue Books SIA. All rights Reserved.</small>
           </div>
         </div>
       </div>
     </div>
+    <button class="to-top" type="button">
+      <i class="bi bi-arrow-up-circle-fill"></i>
+    </button>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
