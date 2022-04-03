@@ -139,12 +139,18 @@ button {
 }
 
 /* change the link color */
-.navbar-custom .navbar-nav .nav-link {
+.nav-link {
   color: var(--cl-font-contrast-light);
 }
 
 /* change the color of hovered links */
-.navbar-custom .nav-item:hover .nav-link {
+
+.nav-link:hover {
+  color: var(--cl-blue);
+}
+
+/* active state for nav bar links */
+.active-state {
   color: var(--cl-blue);
 }
 
