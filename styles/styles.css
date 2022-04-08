@@ -5,6 +5,7 @@
   --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
   --cl-bg-medium: rgb(226, 174, 119);
   --cl-bg-light: rgb(238, 199, 148);
+  --cl-bg-extra-light: rgb(251, 241, 227);
   --cl-blue: rgb(65, 105, 224);
   --cl-blue-op: rgb(65, 105, 224, 0.6);
   --cl-font-dark: rgb(19, 19, 19);
@@ -18,7 +19,9 @@
   --trasition-slow: all 0.8s;
 }
 
-* {
+*,
+*:after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,6 +58,10 @@ a:hover {
 
 button {
   border: none;
+}
+
+img {
+  width: 100%;
 }
 
 /* ===Components=== */
@@ -114,6 +121,10 @@ button {
 }
 
 /* Backgounds */
+
+.bg-color-extra-light {
+  background-color: var(--cl-bg-extra-light);
+}
 .bg-color-light {
   background-color: var(--cl-bg-light);
 }
@@ -139,12 +150,18 @@ button {
 }
 
 /* change the link color */
-.navbar-custom .navbar-nav .nav-link {
+.nav-link {
   color: var(--cl-font-contrast-light);
 }
 
 /* change the color of hovered links */
-.navbar-custom .nav-item:hover .nav-link {
+
+.nav-link:hover {
+  color: var(--cl-blue);
+}
+
+/* active state for nav bar links */
+.active-state {
   color: var(--cl-blue);
 }
 
@@ -234,7 +251,7 @@ button {
   }
 }
 
-/* Adds the text overlay */
+/* Text overlay feature*/
 
 .overlay-home {
   overflow: scroll;
@@ -267,19 +284,109 @@ button {
   cursor: pointer;
 }
 
+/* ===About Us=== */
+
+.about-us {
+  height: 550px;
+}
+
+.about-us-bg-1 {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/about-us-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-bg-2 {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/about-us-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-bg-3 {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/about-us-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Slider feature */
+.slider-top,
+.slider-mid,
+.slider-bottom {
+  height: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  /* border: 1px solid black; */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+}
+
+.slide p {
+  position: absolute;
+  margin: 0 2rem;
+}
+
+.slide span {
+  display: block;
+  margin: 20px;
+}
+
+.dots-top,
+.dots-mid,
+.dots-bottom {
+  height: 10%;
+  padding-top: 7px;
+}
+
+.dot {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: solid 1px var(--cl-blue);
+  transition: var(--transition);
+}
+
+.dot:hover {
+  background-color: var(--cl-blue);
+}
+
+.dot-active {
+  background-color: var(--cl-blue);
+}
+
+/* ===Books=== */
+
+/* ===Contact=== */
+
 /* ===Footer=== */
 
 .footer h2 {
   color: var(--cl-font-contrast-light);
 }
-
-.logo-small {
-  width: 60px;
-  margin-left: -10px;
-}
-
-/* ===About Us=== */
-
-/* ===Books=== */
-
-/* ===Contact=== */
