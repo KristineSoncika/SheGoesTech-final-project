@@ -1,5 +1,5 @@
 $(() => {
-  // === scroll to top button
+  // === Scroll to top button ===
   $(window).scroll(function () {
     if (
       // button appears when number of pixels from the top of body or html (documentElement) when scrolled is > 500
@@ -15,7 +15,7 @@ $(() => {
     $(window).scrollTop(0);
   });
 
-  //  === adds active state to current page in navigation bar
+  //  === Active state navigation bar ===
 
   //   1. gets current page URL
   let url = window.location.href;
@@ -45,4 +45,116 @@ $(() => {
       $(this).addClass("active-state");
     }
   });
+
+  //   === Slider ===
+
+  // Slider Top
+  // moves the left slide to the left by adding negative margin
+  const nextSlideTop = () => {
+    let currentSlide = $(".slider-top .slide:first");
+    let width = currentSlide.width();
+    currentSlide.animate({ "margin-left": -width }, 1000, function () {});
+    console.log(width);
+  };
+  // moves the left slide back in its original place
+  const previousSlideTop = () => {
+    let currentSlide = $(".slider-top .slide:first");
+    currentSlide.animate({ "margin-left": "0px" }, 1000);
+  };
+  // adds active class to the respective dot
+  let slideIndex = 1;
+  const activeTop = (slideIndex) => {
+    let dots = $(".dots-top .dot");
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" dot-active", "");
+    }
+    dots[slideIndex - 1].className += " dot-active";
+  };
+  activeTop(slideIndex);
+
+  $(".dots-top .dot-left").on("click", () => {
+    previousSlideTop();
+    activeTop((slideIndex = 1));
+  });
+
+  $(".dots-top .dot-right").on("click", () => {
+    nextSlideTop();
+    activeTop((slideIndex = 2));
+  });
+
+  // Slider Mid (three slides)
+  const SlideMid = () => {
+    let currentSlide = $(".slider-mid .slide:first");
+    let width = currentSlide.width();
+    currentSlide.animate({ "margin-left": -width }, 1000, function () {});
+  };
+
+  const SlideRight = () => {
+    let currentSlide = $(".slider-mid .slide:first");
+    let width = currentSlide.width() * 2;
+    currentSlide.animate({ "margin-left": -width }, 1000);
+  };
+
+  const SlideLeft = () => {
+    let currentSlide = $(".slider-mid .slide:first");
+    currentSlide.animate({ "margin-left": "0px" }, 1000);
+  };
+
+  const activeMid = (slideIndex) => {
+    let dots = $(".dots-mid .dot");
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" dot-active", "");
+    }
+    dots[slideIndex - 1].className += " dot-active";
+  };
+  activeMid(slideIndex);
+
+  $(".dots-mid .dot-left").on("click", () => {
+    SlideLeft();
+    activeMid((slideIndex = 1));
+  });
+
+  $(".dots-mid .dot-mid").on("click", () => {
+    SlideMid();
+    activeMid((slideIndex = 2));
+  });
+
+  $(".dots-mid .dot-right").on("click", () => {
+    SlideRight();
+    activeMid((slideIndex = 3));
+  });
+
+  // Slider Bottom
+  const nextSlideBottom = () => {
+    let currentSlide = $(".slider-bottom .slide:first");
+    let width = currentSlide.width();
+    currentSlide.animate({ "margin-left": -width }, 1000, function () {});
+    console.log(width);
+  };
+
+  const previousSlideBottom = () => {
+    let currentSlide = $(".slider-bottom .slide:first");
+    currentSlide.animate({ "margin-left": "0px" }, 1000);
+  };
+
+  const activeBottom = (slideIndex) => {
+    let dots = $(".dots-bottom .dot");
+    for (let i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" dot-active", "");
+    }
+    dots[slideIndex - 1].className += " dot-active";
+  };
+  activeBottom(slideIndex);
+
+  $(".dots-bottom .dot-left").on("click", () => {
+    previousSlideBottom();
+    activeBottom((slideIndex = 1));
+  });
+
+  $(".dots-bottom .dot-right").on("click", () => {
+    nextSlideBottom();
+    activeBottom((slideIndex = 2));
+  });
+
+  // ===
 });
