@@ -1,13 +1,6 @@
 # She Goes Tech JS Training - Final Project
 
 A responsive website for an imaginary private library.
-**Requirements:**
-
-- Create a responsive web page
-- Use framework(-s)
-- Include Database connection (MySQL or other)
-- Use a project management tool of your choice
-- Example themes: small web store, social messaging, HR management, ticket booking
 
 ## Links
 
@@ -16,18 +9,27 @@ A responsive website for an imaginary private library.
 
 ## Built with
 
-- Mobile-first workflow
-- HTML5 markup
-- CSS custom properties
-- Bootstrap v5.0
+- HTML5
+- CSS
+- Bootstrap
 - JavaScript
 - jQuery
-- MySQL
-- php
+- Node.js
+- Express.js
+- SQLite
+
+## Dependencies
+
+Please check package.json
 
 ## Features
 
-- Search feature
+- Scroll-to-top button (JS)
+- Slider (JS)
+- Acive-state navbar links (JS)
+- Search (JS)
+- Subscribe for a newsletter (Node.js, Express, SQLite)
+- Send a message (Node.js, Express, SQLite)
 
 ## Screenshots
 
