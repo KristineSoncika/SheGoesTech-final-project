@@ -73,63 +73,49 @@
         </div>
       </div>
     </nav>
-    <!-- search function 
-
-    <div class="hero pt-5 mt-0">
-      <div class="col col-lg-10 col-xxl-8 d-flex pb-5">
-        <div class="col col-xxl-12 d-flex flex-column align-items-center align-items-md-center bg-custom p-5">
-          <div class="justify-content-center d-flex flex-column flex-xl-row align-items-center">
-            <div class="col-md-12 ml-3">
-              <h1 class="display-3 mb-4" id="title">Find Your Book</h1>
-            </div>
-            <div class="col-md-6">
-              <input type="text" class="form-control" id="filter" placeholder="Search Items...">
-            </div>
-          </div>
-        </div>
-      </div>     
-    </div>-->
+ 
   
       <div class="container-fluid bg-color-dark">
         <div class="row justify-content-center d-flex flex-column flex-xl-row align-items-center">
-          <div class="col-md-6 ml-3">
-              <h1 class="display-3 mb-4 mt-4" id="title">Find Your Book</h1>
-          </div>
-          <div class="col-md-6 align-self-center">
-              <input type="text" class="form-control" id="filter" placeholder="Search Items...">
+          <div class="col-md-9 ml-3">
+              <h1 class="display-3 mb-4 mt-4" id="title">Harry Potter</h1>
           </div>
         </div>
       </div>
-    
+      
 
-    <!--list of books-->
+    <!--Book-->
 
-    <div class="hero pt-5 mt-0">
-      <div class="col col-lg-10 col-xxl-8 d-flex pb-5">
-        <div class="col col-xxl-12 d-flex flex-column align-items-center align-items-md-center bg-custom p-5">
-          <div class="justify-content-center d-flex flex-column flex-xl-row align-items-center">
-            <div class="col-md-12 ml-3">
-              <ul class="list-group" id="items">
-                <a href="#" class="list-group-item list-group-item-action bg-color-dark" id="list-btn" aria-current="true">
-                  <li class="list-group" id="list">
-                    Nosaukums
-                  </li>
-                </a>
-                <a href="HarryPoterBook.html" class="list-group-item list-group-item-action bg-color-dark" aria-current="true">
-                  <li class="list-group" id="list">Dapibus ac facilisis in</li>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-color-dark" aria-current="true">
-                  <li class="list-group" id="list">Dapibus pac facilisis in</li>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-color-dark" aria-current="true">
-                  <li class="list-group" id="list">Dapibus jdjdjjdac facilisis in</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <div class="container-fluid bg-color-light">
+      <div class="ow justify-content-center my-5 d-flex flex-column-reverse flex-xl-row align-items-center text-center text-md-start"></div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem provident illo rerum quia quo tempore fuga vitae voluptatem. Vitae id eveniet obcaecati, saepe expedita aspernatur magnam impedit deleniti dolore sequi perspiciatis et deserunt laborum! Quis doloremque, maxime tenetur dicta ducimus quasi pariatur id commodi aperiam odio temporibus excepturi magni ut.
       </div>
     </div>
+
+   <!--Coments-->
+   <div class="container">
+    <div id="main" class="card card-body">
+     <h2 class="title">Add Items</h2>
+     <form id="addForm" class="form-inline mb-3">
+       <input type="text" class="form-control mr-2" id="item">
+       <select class="form-control mr-2">
+         <option value="1">1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+       </select>
+       <input type="submit" class="btn btn-dark" value="Submit">
+     </form>
+     <h2 class="title">Items</h2>
+     <ul id="items" class="list-group">
+       <li class="list-group-item">Item 1 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+       <li class="list-group-item">Item 2 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+       <li class="list-group-item">Item 3 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+       <li class="list-group-item">Item 4 <button class="btn btn-danger btn-sm float-right delete">X</button></li>
+     </ul>
+    </div>
+   </div>
+
+
     
 
     
@@ -190,5 +176,6 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </body>
 </html>
