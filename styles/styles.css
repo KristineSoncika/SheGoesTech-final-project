@@ -1,4 +1,4 @@
-/* ===Global Styles=== */
+/* === GLOBAL STYLES === */
 
 :root {
   --cl-bg-dark: rgb(20, 11, 10);
@@ -7,9 +7,11 @@
   --cl-bg-light: rgb(238, 199, 148);
   --cl-bg-extra-light: rgb(251, 241, 227);
   --cl-blue: rgb(65, 105, 224);
-  --cl-blue-op: rgb(65, 105, 224, 0.6);
+  --cl-blue-op: rgb(65, 105, 224, 0.8);
+  --cl-pink: rgb(255, 183, 173);
   --cl-font-dark: rgb(19, 19, 19);
   --cl-font-light: rgb(53, 53, 53);
+  --cl-font-light-transp: rgba(53, 53, 53, 0.5);
   --cl-font-contrast-dark: rgb(158, 115, 69);
   --cl-font-contrast-light: rgb(226, 174, 119);
   --cl-white: rgb(255, 255, 255);
@@ -64,9 +66,19 @@ img {
   width: 100%;
 }
 
-/* ===Components=== */
+input {
+  color: var(--cl-font-dark);
+  letter-spacing: 2px;
+}
 
-/* Buttons */
+::placeholder {
+  color: var(--cl-font-light-transp);
+  letter-spacing: 2px;
+}
+
+/* === COMPONENTS === */
+
+/* =Buttons= */
 .btn-custom {
   text-decoration: none;
   text-transform: uppercase;
@@ -97,13 +109,23 @@ img {
   background-color: var(--cl-font-contrast-dark);
 }
 
-.btn-light {
+.btn-white {
   background-color: var(--cl-white);
   color: var(--cl-font-dark);
 }
 
-.btn-light:hover {
+.btn-white:hover {
   background-color: var(--cl-bg-light);
+}
+
+.btn-light {
+  background-color: var(--cl-bg-light);
+  color: var(--cl-font-dark);
+}
+
+.btn-light:hover {
+  background-color: var(--cl-font-dark);
+  color: var(--cl-bg-light);
 }
 
 .to-top {
@@ -120,11 +142,12 @@ img {
   color: var(--cl-font-contrast-dark);
 }
 
-/* Backgounds */
+/* =Backgounds= */
 
 .bg-color-extra-light {
   background-color: var(--cl-bg-extra-light);
 }
+
 .bg-color-light {
   background-color: var(--cl-bg-light);
 }
@@ -134,12 +157,16 @@ img {
   color: var(--cl-font-contrast-light);
 }
 
-/* Blue-span */
+.bg-color-blue {
+  background-color: var(--cl-blue-op);
+}
+
+/* =Blue-span= */
 .cl-blue {
   color: var(--cl-blue);
 }
 
-/* ===Navbar=== */
+/* === NAVBAR === */
 
 .logo {
   width: 130px;
@@ -170,7 +197,43 @@ img {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(226,174,119)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-/* ===Hero=== */
+/* === FOOTER === */
+
+.footer h2 {
+  color: var(--cl-font-contrast-light);
+}
+
+.copy {
+  display: flex;
+  align-items: center;
+}
+
+.logo-small {
+  width: 25px;
+}
+
+/* === STAY IN TOUCH === */
+
+.newsletter h2 {
+  font-size: 3rem;
+}
+
+.count {
+  color: var(--cl-font-dark);
+  font-weight: 700;
+}
+
+.newsletter-form input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--cl-font-dark);
+  outline: none;
+  /* width: 70%; */
+}
+
+/* === HOME === */
+
+/* =Hero= */
 .hero {
   background-image: url("../images/hero.jpg");
   background-size: cover;
@@ -189,7 +252,7 @@ img {
   background-color: var(--cl-bg-dark-transp);
 }
 
-/* ===News-Collection-Join=== */
+/* =News-Collection-Join= */
 
 .news-coll-join > div {
   height: 400px;
@@ -251,7 +314,7 @@ img {
   }
 }
 
-/* Text overlay feature*/
+/* =Text overlay feature= */
 
 .overlay-home {
   overflow: scroll;
@@ -277,14 +340,14 @@ img {
   transform: scale(0);
 }
 
-/* ===Featured Books=== */
+/* =Featured Books= */
 
 .carousel-item img {
   max-width: 300px;
   cursor: pointer;
 }
 
-/* ===About Us=== */
+/* === ABOUT US === */
 
 .about-us {
   height: 550px;
@@ -326,7 +389,7 @@ img {
   background-position: center;
 }
 
-/* Slider feature */
+/* =Slider feature= */
 .slider-top,
 .slider-mid,
 .slider-bottom {
@@ -381,12 +444,6 @@ img {
   background-color: var(--cl-blue);
 }
 
-/* ===Books=== */
+/* === BOOKS === */
 
-/* ===Contact=== */
-
-/* ===Footer=== */
-
-.footer h2 {
-  color: var(--cl-font-contrast-light);
-}
+/* === CONTACTS === */
