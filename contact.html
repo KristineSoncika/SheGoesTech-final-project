@@ -26,31 +26,56 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
   </head>
 
-<body>
-  <!---NAV BAR-->
-  <nav class="navbar sticky-top navbar-expand-sm navbar-custom">
-    <div class="container-md">
-      <a class="navbar-brand" href="./index.html"><img class="logo" src="./images/logo.png" alt="Barry Blue Books logo" /></a>
-      <button class="custom-toggler navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link ps-5" aria-current="page" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ms-5" href="about.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ms-5" href="books.html">Books</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link ms-5" href="contact.html">Contact</a>
-          </li>
-        </ul>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script src="./script.js" defer></script>
+
+    
+</head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-md navbar-custom">
+      <div class="container-md">
+        <a class="navbar-brand" href="./index.html"
+          ><img
+            class="logo"
+            src="./images/logo.png"
+            alt="Barry Blue Books logo"
+        /></a>
+        <button
+          class="custom-toggler navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link ps-5" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-5" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-5" href="books.html">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ms-5" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -197,18 +222,19 @@
     </div>
   </div>
   
-  <!--SCRIPT-->
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous">
-    </script>
   
+
+    <button class="to-top" type="button">
+      <i class="bi bi-arrow-up-circle-fill"></i>
+    </button>
   <script
     src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&v=weekly"async>
-    </script>
-
-
-</body>
-
+  </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
+

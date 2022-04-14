@@ -5,8 +5,9 @@
   --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
   --cl-bg-medium: rgb(226, 174, 119);
   --cl-bg-light: rgb(238, 199, 148);
+  --cl-bg-extra-light: rgb(251, 241, 227);
   --cl-blue: rgb(65, 105, 224);
-  --cl-blue-op: rgb(65, 105, 224, 0.7);
+  --cl-blue-op: rgb(65, 105, 224, 0.6);
   --cl-font-dark: rgb(19, 19, 19);
   --cl-font-light: rgb(53, 53, 53);
   --cl-font-contrast-dark: rgb(158, 115, 69);
@@ -15,6 +16,15 @@
   --font-main: "Titillium Web", sans-serif;
   --font-special: "Dosis", sans-serif;
   --transition: all 0.5s;
+  --trasition-slow: all 0.8s;
+}
+
+*,
+*:after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -50,24 +60,71 @@ button {
   border: none;
 }
 
+img {
+  width: 100%;
+}
+
 /* ===Components=== */
 
 /* Buttons */
 .btn-custom {
-  background-color: var(--cl-blue);
   text-decoration: none;
-  color: var(--cl-white);
   text-transform: uppercase;
   letter-spacing: 2px;
+  border: none;
 }
 
-.btn-custom:hover {
+.btn-custom {
   transition: var(--transition);
+}
+
+.btn-blue {
+  background-color: var(--cl-blue);
+  color: var(--cl-white);
+}
+
+.btn-blue:hover {
   background-color: var(--cl-bg-light);
   color: var(--cl-font-dark);
 }
 
+.btn-dark {
+  background-color: var(--cl-font-dark);
+  color: var(--cl-white);
+}
+
+.btn-dark:hover {
+  background-color: var(--cl-font-contrast-dark);
+}
+
+.btn-light {
+  background-color: var(--cl-white);
+  color: var(--cl-font-dark);
+}
+
+.btn-light:hover {
+  background-color: var(--cl-bg-light);
+}
+
+.to-top {
+  display: none;
+  position: fixed;
+  color: var(--cl-blue);
+  font-size: 3rem;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+}
+
+.to-top:hover {
+  color: var(--cl-font-contrast-dark);
+}
+
 /* Backgounds */
+
+.bg-color-extra-light {
+  background-color: var(--cl-bg-extra-light);
+}
 .bg-color-light {
   background-color: var(--cl-bg-light);
 }
@@ -93,12 +150,18 @@ button {
 }
 
 /* change the link color */
-.navbar-custom .navbar-nav .nav-link {
+.nav-link {
   color: var(--cl-font-contrast-light);
 }
 
 /* change the color of hovered links */
-.navbar-custom .nav-item:hover .nav-link {
+
+.nav-link:hover {
+  color: var(--cl-blue);
+}
+
+/* active state for nav bar links */
+.active-state {
   color: var(--cl-blue);
 }
 
@@ -128,9 +191,8 @@ button {
 
 /* ===News-Collection-Join=== */
 
-.news-coll-join div {
-  height: 300px;
-  cursor: pointer;
+.news-coll-join > div {
+  height: 400px;
 }
 
 .news-coll-join h2,
@@ -151,7 +213,7 @@ button {
     url("../images/news.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
 }
 
 .collection {
@@ -168,15 +230,6 @@ button {
   border-bottom: 1px solid var(--cl-white);
 }
 
-@media only screen and (min-width: 992px) {
-  .collection {
-    border-top: none;
-    border-bottom: none;
-    border-left: 1px solid var(--cl-white);
-    border-right: 1px solid var(--cl-white);
-  }
-}
-
 .join {
   background-image: linear-gradient(
       to top,
@@ -189,6 +242,41 @@ button {
   background-position: center;
 }
 
+@media only screen and (min-width: 992px) {
+  .collection {
+    border-top: none;
+    border-bottom: none;
+    border-left: 1px solid var(--cl-white);
+    border-right: 1px solid var(--cl-white);
+  }
+}
+
+/* Text overlay feature*/
+
+.overlay-home {
+  overflow: scroll;
+  position: absolute;
+  height: 0;
+  bottom: 100%;
+  transition: var(--trasition-slow);
+}
+
+.news:hover .overlay-home {
+  bottom: 0;
+  height: 100%;
+}
+
+.overlay-home-hide {
+  overflow: hidden;
+  position: absolute;
+  transform: scale(1);
+  transition: var(--transition);
+}
+
+.news:hover .overlay-home-hide {
+  transform: scale(0);
+}
+
 /* ===Featured Books=== */
 
 .carousel-item img {
@@ -196,18 +284,102 @@ button {
   cursor: pointer;
 }
 
-/* ===Footer=== */
-
-.footer h2 {
-  color: var(--cl-font-contrast-light);
-}
-
-.logo-small {
-  width: 60px;
-  margin-left: -10px;
-}
-
 /* ===About Us=== */
+
+.about-us {
+  height: 550px;
+}
+
+.about-us-bg-1 {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/about-us-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-bg-2 {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/about-us-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-us-bg-3 {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/about-us-3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Slider feature */
+.slider-top,
+.slider-mid,
+.slider-bottom {
+  height: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 0;
+  /* border: 1px solid black; */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  position: relative;
+  white-space: normal;
+}
+
+.slide p {
+  position: absolute;
+  margin: 0 2rem;
+}
+
+.slide span {
+  display: block;
+  margin: 20px;
+}
+
+.dots-top,
+.dots-mid,
+.dots-bottom {
+  height: 10%;
+  padding-top: 7px;
+}
+
+.dot {
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: solid 1px var(--cl-blue);
+  transition: var(--transition);
+}
+
+.dot:hover {
+  background-color: var(--cl-blue);
+}
+
+.dot-active {
+  background-color: var(--cl-blue);
+}
 
 /* ===Books=== */
 
@@ -227,6 +399,7 @@ button {
   background-color: var(--cl-bg-dark:);
 }
 /* ===Contact=== */
+
 
 #icons {
   font-size: 4rem;
@@ -256,4 +429,10 @@ button {
 }
 
 
+
+/* ===Footer=== */
+
+.footer h2 {
+  color: var(--cl-font-contrast-light);
+}
 
