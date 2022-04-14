@@ -178,7 +178,7 @@ img {
   background-position: center;
   background-attachment: fixed;
   margin-top: -71.07px;
-}
+} 
 
 .hero h1,
 .hero p {
@@ -383,10 +383,56 @@ img {
 
 /* ===Books=== */
 
+#title {
+  color: var(--cl-font-contrast-light);
+}
+
+.list-groupxs {
+  border: none;
+}
+
+#list {
+  color: var(--cl-bg-light);
+}
+
+#list-btn {
+  background-color: var(--cl-bg-dark:);
+}
 /* ===Contact=== */
+
+
+#icons {
+  font-size: 4rem;
+  color: var(--cl-bg-light)
+}
+
+#icons:hover {
+  color: var(--cl-blue);
+}
+
+#message {
+  color: var(--cl-font-contrast-light);
+}
+
+.map-container-2{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-2 iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:center;
+}
+
+
 
 /* ===Footer=== */
 
 .footer h2 {
   color: var(--cl-font-contrast-light);
 }
+
