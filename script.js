@@ -1,12 +1,10 @@
-
-//alert('hello');
-// BOOKS //
+// BOOKS SEARCH //
 
 let filter = document.getElementById('filter');
 let itemList = document.getElementById('items'); 
 
 //filter event
-if (filter){
+if (filter){ //hack 
   filter.addEventListener('keyup',filterItems);
 }
 
