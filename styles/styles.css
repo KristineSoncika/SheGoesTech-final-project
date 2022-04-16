@@ -396,14 +396,18 @@ img {
 }
 
 #list-btn {
-  background-color: var(--cl-bg-dark:);
+  background-color: var(--cl-bg-dark);
+}
+
+#BookTitle {
+  color: var(--cl-blue);
 }
 /* ===Contact=== */
 
 
 #icons {
   font-size: 4rem;
-  color: var(--cl-bg-light)
+  color: var(--cl-bg-light);
 }
 
 #icons:hover {
