@@ -3,12 +3,12 @@
 :root {
   --cl-bg-dark: rgb(20, 11, 10);
   --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
-  --cl-bg-dark-transp: rgba(20, 11, 10, 0.3);
   --cl-bg-medium: rgb(226, 174, 119);
   --cl-bg-light: rgb(238, 199, 148);
   --cl-bg-extra-light: rgb(251, 241, 227);
   --cl-blue: rgb(65, 105, 224);
   --cl-blue-op: rgb(65, 105, 224, 0.8);
+
   --cl-font-dark: rgb(19, 19, 19);
   --cl-font-light: rgb(53, 53, 53);
   --cl-font-light-transp: rgba(53, 53, 53, 0.5);
@@ -144,14 +144,6 @@ input {
 
 /* =Backgounds= */
 
-.bg-transp {
-  background-color: var(--cl-bg-dark-transp);
-}
-
-.bg-transp-light {
-  background-color: var(--cl-bg-dark-transp);
-}
-
 .bg-color-extra-light {
   background-color: var(--cl-bg-extra-light);
 }
@@ -247,7 +239,7 @@ input {
 
 /* =Hero= */
 .hero {
-  background-image: url("../images/hero.jpg");
+  background-image: url("/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -258,6 +250,10 @@ input {
 .hero h1,
 .hero p {
   color: var(--cl-font-contrast-light);
+}
+
+.bg-custom {
+  background-color: var(--cl-bg-dark-transp);
 }
 
 /* =News-Collection-Join= */
@@ -281,7 +277,7 @@ input {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0)
     ),
-    url("../images/news.jpg");
+    url("/news.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -293,7 +289,7 @@ input {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0)
     ),
-    url("../images/collection.jpg");
+    url("/collection.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -307,7 +303,7 @@ input {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0)
     ),
-    url("../images/join.jpg");
+    url("/join.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -358,19 +354,19 @@ input {
 }
 
 .cover-1 {
-  background-image: url("../images/book-1.jpg");
+  background-image: url("/book-1.jpg");
 }
 
 .cover-2 {
-  background-image: url("../images/book-2.jpeg");
+  background-image: url("/book-2.jpeg");
 }
 
 .cover-3 {
-  background-image: url("../images/book-3.png");
+  background-image: url("/book-3.png");
 }
 
 .cover-4 {
-  background-image: url("../images/book-4.jpeg");
+  background-image: url("/book-4.jpeg");
 }
 
 /* === ABOUT US === */
@@ -380,21 +376,36 @@ input {
 }
 
 .about-us-bg-1 {
-  background-image: url("../images/about-us-1.jpg");
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("/about-us-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about-us-bg-2 {
-  background-image: url("../images/about-us-2.jpg");
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("/about-us-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about-us-bg-3 {
-  background-image: url("../images/about-us-3.jpg");
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("/about-us-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -458,41 +469,3 @@ input {
 /* === BOOKS === */
 
 /* === CONTACTS === */
-
-.contacts {
-  background-image: url("../images/contacts.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.contacts h2 {
-  font-size: 3rem;
-}
-
-#icons {
-  font-size: 4rem;
-  color: var(--cl-bg-light);
-}
-
-#icons:hover {
-  color: var(--cl-blue);
-}
-
-#message {
-  color: var(--cl-font-contrast-light);
-}
-
-.map-container-2 {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-.map-container-2 iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: center;
-}

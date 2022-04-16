@@ -20,7 +20,12 @@ A responsive website for an imaginary private library.
 
 ## Dependencies
 
-Please check package.json
+- express
+- body-parser
+- ejs
+- sqlite3
+
+Please check package.json for details
 
 ## Features
 

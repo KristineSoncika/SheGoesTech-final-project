@@ -1,95 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barry Blue Books</title>
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-
-    <!-- Bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Titillium+Web:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="./styles/styles.css" />
-
-    <!-- Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-    />
-
-    <!-- jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- JS -->
-    <script src="./scripts/script.js" defer></script>
-  </head>
+  <%- include('./layout/header.ejs')%>
   <body>
-    <nav class="navbar sticky-top navbar-expand-md navbar-custom">
-      <div class="container-md">
-        <a class="navbar-brand" href="./index.html"
-          ><img
-            class="logo"
-            src="./images/logo.png"
-            alt="Barry Blue Books logo"
-        /></a>
-        <button
-          class="custom-toggler navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link ps-5" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link ms-5" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link ms-5" href="books.html">Books</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link ms-5" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <%- include('./layout/navbar.ejs')%>
     <div class="container-fluid">
       <div class="row hero vh-100 justify-content-center">
         <div
           class="col col-lg-10 col-xxl-8 d-flex align-items-end justify-content-center justify-content-xl-end pb-5"
         >
           <div
-            class="col col-xxl-12 d-flex flex-column align-items-center align-items-md-end bg-transp rounded p-3"
+            class="col col-xxl-12 d-flex flex-column align-items-center align-items-md-end bg-custom rounded p-3"
           >
             <h1 class="text-center text-uppercase fw-bold mb-4">
               Welcome to <span class="cl-blue">Barry Blue Books</span>
@@ -107,7 +25,7 @@
               members and there are plenty of opportunities to visit us.
             </p>
             <a
-              href="./about.html"
+              href="/"
               role="button"
               class="btn btn-custom btn-blue p-2 mt-2"
               >Read More</a
@@ -231,9 +149,9 @@
             ipsum excepturi nemo! Tempore culpa dolorum corporis.
           </p>
           <a
-            href="./books.html"
+            href="/books"
             role="button"
-            class="btn btn-custom btn-dark p-2 mt-2"
+            class="btn btn-custom btn-dark p-2 mb-3"
             >Reserve</a
           >
         </div>
@@ -245,22 +163,22 @@
           >
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <a href="./books.html">
+                <a href="/books">
                   <div class="mx-auto w-50 d-block book-cover cover-1"></div>
                 </a>
               </div>
               <div class="carousel-item">
-                <a href="./books.html">
+                <a href="/books">
                   <div class="mx-auto w-50 d-block book-cover cover-2"></div
                 ></a>
               </div>
               <div class="carousel-item">
-                <a href="./books.html">
+                <a href="/books">
                   <div class="mx-auto w-50 d-block book-cover cover-3"></div
                 ></a>
               </div>
               <div class="carousel-item">
-                <a href="./books.html">
+                <a href="/books">
                   <div class="mx-auto w-50 d-block book-cover cover-4"></div
                 ></a>
               </div>
@@ -293,93 +211,44 @@
         </div>
       </div>
       <div class="row stay-in-touch bg-color-blue">
-        <div
-          class="col-9 col-md-8 col-lg-6 col-xxl-5 mx-auto text-center my-5 py-5"
-        >
-          <div class="mb-2">
-            <h2 class="text-uppercase fw-bold mb-5">Stay in Touch</h2>
-          </div>
-          <div class="mb-3 sign-up">
-            <p class="text-start">
-              Enter your email to join the community of
-              <span class="count">11</span> book lovers. Amet consectetur
-              adipisicing elit. Sint, eos corporis. Laudantium sequi rerum iste.
-            </p>
-            <form
-              action=""
-              class="newsletter-form d-flex flex-column justify-content-start align-items-start flex-md-row align-items-md-end"
-            >
-              <input
-                type="email"
-                class="p-2 mt-2 w-75"
-                placeholder="Your email address"
-              />
-              <button
-                type="button"
-                class="btn btn-custom btn-light p-2 mt-4 ms-md-3 sign-up-btn"
-              >
-                Join Now
-              </button>
-            </form>
-          </div>
-          <div class="mb-3 sign-up-response hide">
-            <p>
-              Thank you for signing up for the Barry Blue Books newsletter!
-              We'll be sending out our newsletter monthly or so - hope you find
-              it enjoyable.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row bg-color-dark footer">
-        <div
-          class="col-9 col-md-11 col-lg-9 mx-auto my-5 d-flex flex-column align-items-start align-items-md-center"
-        >
-          <div
-            class="w-100 d-flex flex-column flex-md-row align-items-start justify-content-md-around my-4"
-          >
-            <div class="mb-4">
-              <h2 class="pb-2 text-uppercase">We are Open</h2>
-              <p>Mon - Fri: 9:00 - 17:00</p>
-              <p>Sat: 9:00 - 16:00</p>
-            </div>
-            <div class="mb-4">
-              <h2 class="pb-2 text-uppercase">Visiting us</h2>
-              <a href="#" class="text-decoration-none"
-                ><p>
-                  <i class="bi bi-geo-alt-fill pe-2"></i>Piena iela 87, Riga,
-                  LV-1001
-                </p></a
-              >
-              <a href="#" class="text-decoration-none">
-                <p><i class="bi bi-telephone-fill pe-2"></i>+371 20114562</p></a
-              >
-              <a href="#" class="text-decoration-none">
-                <p>
-                  <i class="bi bi-envelope-fill pe-2"></i>info@bb-books.com
-                </p></a
-              >
-            </div>
-            <div>
-              <a href="#"
-                ><i class="bi bi-facebook fs-2 pe-3 d-md-block mb-md-2"></i
-              ></a>
-              <a href="#">
-                <i class="bi bi-twitter fs-2 pe-3 d-md-block mb-md-2"></i
-              ></a>
-              <a href="#"> <i class="bi bi-instagram fs-2 d-md-block"></i></a>
-            </div>
-          </div>
-          <hr class="w-100 mx-auto" />
-          <div class="pb-3 copy">
-            <img class="logo-small" src="./images/logo-small.png" alt="" />
-            <small> Barry Blue Books SIA. All rights Reserved.</small>
-          </div>
-        </div>
-      </div>
+  <div class="col-9 col-md-8 col-lg-6 col-xxl-5 mx-auto text-center my-5 py-5">
+    <div class="mb-2">
+      <h2 class="text-uppercase fw-bold mb-5">Stay in Touch</h2>
     </div>
-    <button class="to-top" type="button">
-      <i class="bi bi-arrow-up-circle-fill"></i>
-    </button>
+    <div class="mb-3 sign-up">
+      <p class="text-start">
+        Enter your email to join the community of
+        <span class="count"><%=data%></span> book lovers. We'll be sending out
+        our newsletter monthly or so - hope you find it enjoyable.
+      </p>
+      <form
+        action="/"
+        method="POST"
+        class="newsletter-form d-flex flex-column justify-content-start align-items-start flex-md-row align-items-md-end"
+        id="sign-up-form"
+      >
+        <input
+          name="email"
+          type="email"
+          class="p-2 mt-2 w-75"
+          placeholder="Your email address"
+          id="email-value"
+          required
+        />
+        <button
+          type="submit"
+          class="btn btn-custom btn-light sign-up-btn-home p-2 mt-4 ms-md-3"
+        >
+          Join Now
+        </button>
+      </form>
+    </div>
+    <div class="mb-3 sign-up-response hide">
+      <p>Thank you for signing up for the Barry Blue Books newsletter!</p>
+    </div>
+  </div>
+</div>
+      <%- include('./layout/footer.ejs')%>
+    </div>
   </body>
 </html>
