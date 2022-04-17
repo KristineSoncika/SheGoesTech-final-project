@@ -32,7 +32,7 @@ app.listen(3000, () => {
   console.log("Server started");
 });
 
-// adds root route: home page (/)
+// adds get root route: home page (/)
 app.get("/", (req, res) => {
   // Find count of users in DB
   const q = "SELECT COUNT(*) AS count FROM users_newletter";
@@ -47,7 +47,6 @@ app.get("/", (req, res) => {
 app.post("/", (req, res) => {
   // extracting email using bodyParser
   let email = [req.body.email];
-  console.log(email);
   const q = "INSERT INTO users_newletter (email) VALUES (?)";
   db.run(q, email, (err) => {
     if (err) return console.error(err.message);
@@ -55,7 +54,7 @@ app.post("/", (req, res) => {
   });
 });
 
-// adds route for About Us (/about)
+// adds get/post routes for About Us (/about)
 app.get("/about", (req, res) => {
   const q = "SELECT COUNT(*) AS count FROM users_newletter";
   db.all(q, [], (err, results) => {
@@ -68,7 +67,6 @@ app.get("/about", (req, res) => {
 app.post("/about", (req, res) => {
   // extracting email using bodyParser
   let email = [req.body.email];
-  console.log(email);
   const q = "INSERT INTO users_newletter (email) VALUES (?)";
   db.run(q, email, (err) => {
     if (err) return console.error(err.message);
@@ -76,7 +74,7 @@ app.post("/about", (req, res) => {
   });
 });
 
-// adds route for Books (/books)
+// adds get/post routes for Books (/books)
 app.get("/books", (req, res) => {
   const q = "SELECT COUNT(*) AS count FROM users_newletter";
   db.all(q, [], (err, results) => {
@@ -89,7 +87,6 @@ app.get("/books", (req, res) => {
 app.post("/books", (req, res) => {
   // extracting email using bodyParser
   let email = [req.body.email];
-  console.log(email);
   const q = "INSERT INTO users_newletter (email) VALUES (?)";
   db.run(q, email, (err) => {
     if (err) return console.error(err.message);
@@ -97,28 +94,21 @@ app.post("/books", (req, res) => {
   });
 });
 
-// adds route for Contacts (/contacts)
+// adds get/post routes for Contacts
 app.get("/contacts", (req, res) => {
-  const q = "SELECT COUNT(*) AS count FROM users_newletter";
-  db.all(q, [], (err, results) => {
-    if (err) return console.error(err.message);
-    let count = results[0].count;
-    res.render("contacts", { data: count });
-  });
+  res.render("contacts", { usersName: "" });
 });
 
-// app.get("/test", (req, res) => {
-// const q = "SELECT COUNT(*) AS count FROM users_newletter";
-// db.all(q, [], (err, results) => {
-//   if (err) return console.error(err.message);
-//   let count = results[0].count;
-//   res.render("test", { data: count });
-// });
-//   res.render("test", { quote: "AJAX" });
-// });
-
-// app.post("/test", (req, res) => {
-//   let email = [req.body.email];
-//   console.log(email);
-//   res.send({ response: "test" });
-// });
+app.post("/contacts", (req, res) => {
+  // extracting email using bodyParser
+  let firstName = req.body.firstname;
+  let lastName = req.body.lastname;
+  let email = req.body.email;
+  let message = req.body.message;
+  const q =
+    "INSERT INTO users_messages (first_name, last_name, email, message) VALUES (?, ?, ?, ?)";
+  db.run(q, [firstName, lastName, email, message], (err) => {
+    if (err) return console.error(err.message);
+    res.send({ usersName: firstName });
+  });
+});

@@ -3,7 +3,7 @@
 :root {
   --cl-bg-dark: rgb(20, 11, 10);
   --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
-  --cl-bg-dark-transp: rgba(20, 11, 10, 0.3);
+  --cl-bg-dark-transp: rgba(20, 11, 10, 0.2);
   --cl-bg-medium: rgb(226, 174, 119);
   --cl-bg-light: rgb(238, 199, 148);
   --cl-bg-extra-light: rgb(251, 241, 227);
@@ -466,33 +466,25 @@ input {
   background-position: center;
 }
 
-.contacts h2 {
+.contacts h2,
+.map h2,
+.message h2 {
   font-size: 3rem;
 }
 
-#icons {
-  font-size: 4rem;
-  color: var(--cl-bg-light);
+.contacts a {
+  color: var(--cl-font-dark);
+  font-weight: 700;
 }
 
-#icons:hover {
+.contacts a:hover i {
   color: var(--cl-blue);
 }
 
-#message {
-  color: var(--cl-font-contrast-light);
+.contacts i {
+  font-size: 3rem;
 }
 
-.map-container-2 {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-.map-container-2 iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  position: center;
+.map h2 {
+  color: var(--cl-font-contrast-light);
 }

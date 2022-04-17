@@ -3,12 +3,12 @@
 :root {
   --cl-bg-dark: rgb(20, 11, 10);
   --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
+  --cl-bg-dark-transp: rgba(20, 11, 10, 0.2);
   --cl-bg-medium: rgb(226, 174, 119);
   --cl-bg-light: rgb(238, 199, 148);
   --cl-bg-extra-light: rgb(251, 241, 227);
   --cl-blue: rgb(65, 105, 224);
   --cl-blue-op: rgb(65, 105, 224, 0.8);
-
   --cl-font-dark: rgb(19, 19, 19);
   --cl-font-light: rgb(53, 53, 53);
   --cl-font-light-transp: rgba(53, 53, 53, 0.5);
@@ -144,6 +144,14 @@ input {
 
 /* =Backgounds= */
 
+.bg-transp {
+  background-color: var(--cl-bg-dark-transp);
+}
+
+.bg-transp-light {
+  background-color: var(--cl-bg-dark-transp);
+}
+
 .bg-color-extra-light {
   background-color: var(--cl-bg-extra-light);
 }
@@ -250,10 +258,6 @@ input {
 .hero h1,
 .hero p {
   color: var(--cl-font-contrast-light);
-}
-
-.bg-custom {
-  background-color: var(--cl-bg-dark-transp);
 }
 
 /* =News-Collection-Join= */
@@ -376,36 +380,21 @@ input {
 }
 
 .about-us-bg-1 {
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0)
-    ),
-    url("/about-us-1.jpg");
+  background-image: url("/about-us-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about-us-bg-2 {
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0)
-    ),
-    url("/about-us-2.jpg");
+  background-image: url("/about-us-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about-us-bg-3 {
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0)
-    ),
-    url("/about-us-3.jpg");
+  background-image: url("/about-us-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -469,3 +458,33 @@ input {
 /* === BOOKS === */
 
 /* === CONTACTS === */
+
+.contacts {
+  background-image: url("/contacts.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contacts h2,
+.map h2,
+.message h2 {
+  font-size: 3rem;
+}
+
+.contacts a {
+  color: var(--cl-font-dark);
+  font-weight: 700;
+}
+
+.contacts a:hover i {
+  color: var(--cl-blue);
+}
+
+.contacts i {
+  font-size: 3rem;
+}
+
+.map h2 {
+  color: var(--cl-font-contrast-light);
+}

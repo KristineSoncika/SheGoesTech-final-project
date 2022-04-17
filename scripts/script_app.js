@@ -72,6 +72,34 @@ $(() => {
     });
   });
 
+  // === Message Us with AJAX Contacts ===
+  $(".message-us-btn").on("click", () => {
+    console.log("works");
+    $("#message-us-form").on("submit", (event) => {
+      event.preventDefault();
+      let firstNameVal = $("#firstName").val();
+      let lastNameVal = $("#lastName").val();
+      let emailVal = $("#email").val();
+      let messageVal = $("#message").val();
+      $.ajax({
+        url: "/contacts",
+        method: "POST",
+        contentType: "application/json",
+        data: JSON.stringify({
+          firstname: firstNameVal,
+          lastname: lastNameVal,
+          email: emailVal,
+          message: messageVal,
+        }),
+        success: function (res) {
+          $("#message-us-form").addClass("hide");
+          $(".message-us-response").removeClass("hide");
+          $(".users-name").html(res.usersName);
+        },
+      });
+    });
+  });
+
   //  === Active state navigation bar ===
 
   //   1. gets current page URL

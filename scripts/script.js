@@ -53,6 +53,13 @@ $(() => {
     $(".sign-up-response").removeClass("hide");
   });
 
+  // === Message-us-message ===
+
+  $(".message-us-btn").on("click", () => {
+    $("#message-us-form").addClass("hide");
+    $(".message-us-response").removeClass("hide");
+  });
+
   //contacts//
   //alert for Send button
   // const btnSend = document.getElementById("send");
