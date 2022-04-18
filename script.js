@@ -1,12 +1,13 @@
-
-alert('hello');
-// BOOKS //
+// BOOKS SEARCH //
 
 let filter = document.getElementById('filter');
 let itemList = document.getElementById('items'); 
 
 //filter event
-filter.addEventListener('keyup',filterItems);
+if (filter){ //hack 
+  filter.addEventListener('keyup',filterItems);
+}
+
 
 //filter items
 function filterItems(e){
@@ -14,12 +15,13 @@ function filterItems(e){
     let text = e.target.value.toLowerCase();
     //get li
     let items = itemList.getElementsByTagName('li');
-    console.log(items);
-     
+    
+    
 
     //convert HTML collection to an array
     Array.from(items).forEach(function(item){
-        let itemName = item.lastChild.textContent; // pazūd nosaukumi, bet kā dabūt pārējo card prom?
+        console.log(item);
+        let itemName = item.children[0].textContent;
         if(itemName.toLowerCase().indexOf(text) != -1){
             item.style.display = 'block';
         } else {
@@ -31,43 +33,67 @@ function filterItems(e){
 
 //ADD COMENTS
 let form = document.getElementById('addForm');
+console.log(form);
+
 
 
 // FOrm submit event
-form.addEventListener('submit',addItem); // tikko tiek nospiests submint, tā tiek izsaukta funkcija addItem
+if(form){
+  form.addEventListener('submit',addItem); // tikko tiek nospiests submint, tā tiek izsaukta funkcija addItem
+}
+
+let coments = JSON.parse(localStorage.getItem('coments')); // kā string saglabājas komentāri
+if (coments) {
+  coments.forEach(function(coment){  // ja ir storage komentāri (kuri salikti array), tad katru komentāru pievieno html
+    addComent(coment);
+  });
+} else {  
+  coments = []; // kad nekas nebūs komentāros, uztaisās tukšs array, lai ir kaut kas kur likt iekšā
+}
 
 //add item funkcija
-function addItem(e){
+function addItem(e){ 
     e.preventDefault(); // šo vajag paredzēt pie submit/apstirināt
-
+    console.log('notika');
     // get input value
     let newItem = document.getElementById('item').value;
 
-    //create new li element
-    let li = document.createElement('li');
-    //add class
-    li.className = 'list-group-item';
-    // add text node with input value
-    li.appendChild(document.createTextNode(newItem)); //text node is variable newItem, ko ievada lietotājs
+    addComent(newItem);  // šeit pievieno html
+    addToStorage(newItem); //šajā brīdī kaut kas array jau ir (vai nu tukšums vai komentārs)
+}
+function addToStorage(coment){
+  coments.push(coment); //ieliku iepriekš izveidotajā array 47 vai 53 rindiņa, liek array, lai varētu pārtaisīt par string un ieliekt locastorage
+  localStorage.setItem('coments',JSON.stringify(coments)); //ieliek komentāru locastorage array ar komentāriem
+}
 
-    //create the delite button element
-    let deleteBtn = document.createElement('button');
+function addComent(coment){
+  //create new li element
+  let li = document.createElement('li');
+  //add class
+  li.className = 'list-group-item';
+  // add text node with input value
+  li.appendChild(document.createTextNode(coment)); //text node is variable newItem, ko ievada lietotājs
 
-    //add clases to delite button
-    deleteBtn.className = 'btn btn-danger btn-sm float-right delete'; 
-    
-    //appent text node
-    deleteBtn.appendChild(document.createTextNode('X'));
+  //create the delite button element
+  let deleteBtn = document.createElement('button');
 
-    //now that we have all that we have to append the button into li
-    li.appendChild(deleteBtn);
+  //add clases to delite button
+  deleteBtn.className = 'btn btn-danger btn-sm float-right delete'; 
+  
+  //appent text node
+  deleteBtn.appendChild(document.createTextNode('X'));
 
-    itemList.appendChild(li);
+  //now that we have all that we have to append the button into li
+  li.appendChild(deleteBtn);
+
+  itemList.appendChild(li);
 }
 
 //remove item nospiežot x
+if(itemList){
+  itemList.addEventListener('click', removeItem);
+}
 
-itemList.addEventListener('click', removeItem);
 
 function removeItem(e){
     if(e.target.classList.contains('delete')){ //jo bez šī, ķer visus klikšķus, aks ir iekšā li ielikti, tāpēc vajag if statemnt, lai dabūtu tieši uz tās pogas
@@ -84,7 +110,10 @@ function removeItem(e){
 //contacts//
 //alert for Send button
 const btnSend = document.getElementById('send');
-btnSend.addEventListener('click', showMessage)
+if(btnSend) {
+  btnSend.addEventListener('click', showMessage);
+}
+
 
 function showMessage(){
     alert('We Got Your message!\nWe Will answer in 2 to 5 days!\nThank You!');
