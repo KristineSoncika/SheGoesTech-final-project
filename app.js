@@ -49,8 +49,20 @@ app.post("/", (req, res) => {
   let email = [req.body.email];
   const q = "INSERT INTO users_newletter (email) VALUES (?)";
   db.run(q, email, (err) => {
-    if (err) return console.error(err.message);
-    res.send();
+    if (err) {
+      if (
+        err.message ===
+        "SQLITE_CONSTRAINT: UNIQUE constraint failed: users_newletter.email"
+      ) {
+        res.send("error");
+        console.error(err.message);
+      } else {
+        return console.error(err.message);
+      }
+    } else {
+      res.send();
+      console.log("sent");
+    }
   });
 });
 
@@ -69,8 +81,20 @@ app.post("/about", (req, res) => {
   let email = [req.body.email];
   const q = "INSERT INTO users_newletter (email) VALUES (?)";
   db.run(q, email, (err) => {
-    if (err) return console.error(err.message);
-    res.send();
+    if (err) {
+      if (
+        err.message ===
+        "SQLITE_CONSTRAINT: UNIQUE constraint failed: users_newletter.email"
+      ) {
+        res.send("error");
+        console.error(err.message);
+      } else {
+        return console.error(err.message);
+      }
+    } else {
+      res.send();
+      console.log("sent");
+    }
   });
 });
 
@@ -80,7 +104,9 @@ app.get("/books", (req, res) => {
   db.all(q, [], (err, results) => {
     if (err) return console.error(err.message);
     let count = results[0].count;
-    res.render("books", { data: count });
+    res.render("books", {
+      data: count,
+    });
   });
 });
 
@@ -89,8 +115,20 @@ app.post("/books", (req, res) => {
   let email = [req.body.email];
   const q = "INSERT INTO users_newletter (email) VALUES (?)";
   db.run(q, email, (err) => {
-    if (err) return console.error(err.message);
-    res.send();
+    if (err) {
+      if (
+        err.message ===
+        "SQLITE_CONSTRAINT: UNIQUE constraint failed: users_newletter.email"
+      ) {
+        res.send("error");
+        console.error(err.message);
+      } else {
+        return console.error(err.message);
+      }
+    } else {
+      res.send();
+      console.log("sent");
+    }
   });
 });
 

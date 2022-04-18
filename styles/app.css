@@ -3,18 +3,19 @@
 :root {
   --cl-bg-dark: rgb(20, 11, 10);
   --cl-bg-dark-transp: rgba(20, 11, 10, 0.7);
-  --cl-bg-dark-transp: rgba(20, 11, 10, 0.2);
+  --cl-bg-dark-transp-light: rgba(20, 11, 10, 0.2);
   --cl-bg-medium: rgb(226, 174, 119);
   --cl-bg-light: rgb(238, 199, 148);
   --cl-bg-extra-light: rgb(251, 241, 227);
   --cl-blue: rgb(65, 105, 224);
-  --cl-blue-op: rgb(65, 105, 224, 0.8);
+  --cl-blue-transp: rgb(65, 105, 224, 0.8);
   --cl-font-dark: rgb(19, 19, 19);
   --cl-font-light: rgb(53, 53, 53);
   --cl-font-light-transp: rgba(53, 53, 53, 0.5);
   --cl-font-contrast-dark: rgb(158, 115, 69);
   --cl-font-contrast-light: rgb(226, 174, 119);
   --cl-white: rgb(255, 255, 255);
+  --cl-error: rgb(163, 35, 35);
   --font-main: "Titillium Web", sans-serif;
   --font-special: "Dosis", sans-serif;
   --transition: all 0.5s;
@@ -149,7 +150,7 @@ input {
 }
 
 .bg-transp-light {
-  background-color: var(--cl-bg-dark-transp);
+  background-color: var(--cl-bg-dark-transp-light);
 }
 
 .bg-color-extra-light {
@@ -166,7 +167,7 @@ input {
 }
 
 .bg-color-blue {
-  background-color: var(--cl-blue-op);
+  background-color: var(--cl-blue-transp);
 }
 
 /* =Blue-span= */
@@ -241,6 +242,11 @@ input {
 
 .hide {
   display: none;
+}
+
+.error {
+  color: var(--cl-error);
+  font-size: 1rem;
 }
 
 /* === HOME === */

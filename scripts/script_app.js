@@ -27,8 +27,12 @@ $(() => {
         contentType: "application/json",
         data: JSON.stringify({ email: value }),
         success: function (res) {
-          $(".sign-up").addClass("hide");
-          $(".sign-up-response").removeClass("hide");
+          if (res === "error") {
+            $(".error").removeClass("hide");
+          } else {
+            $(".sign-up").addClass("hide");
+            $(".sign-up-response").removeClass("hide");
+          }
         },
       });
     });
@@ -46,8 +50,12 @@ $(() => {
         contentType: "application/json",
         data: JSON.stringify({ email: value }),
         success: function (res) {
-          $(".sign-up").addClass("hide");
-          $(".sign-up-response").removeClass("hide");
+          if (res === "error") {
+            $(".error").removeClass("hide");
+          } else {
+            $(".sign-up").addClass("hide");
+            $(".sign-up-response").removeClass("hide");
+          }
         },
       });
     });
@@ -65,8 +73,12 @@ $(() => {
         contentType: "application/json",
         data: JSON.stringify({ email: value }),
         success: function (res) {
-          $(".sign-up").addClass("hide");
-          $(".sign-up-response").removeClass("hide");
+          if (res === "error") {
+            $(".error").removeClass("hide");
+          } else {
+            $(".sign-up").addClass("hide");
+            $(".sign-up-response").removeClass("hide");
+          }
         },
       });
     });

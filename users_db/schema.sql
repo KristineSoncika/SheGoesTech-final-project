@@ -7,7 +7,7 @@
 -- INSERT INTO users_newletter (email)
 -- VALUES ('nick@cave.com');
 
--- DELETE FROM users_messages WHERE id in (7,8, 9, 10, 11, 12, 13);
+-- DELETE FROM users_newletter WHERE id in (43, 44, 45, 46);
 
 SELECT * FROM users_newletter;
 -- SELECT COUNT(*) FROM users_newletter;
