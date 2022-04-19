@@ -401,6 +401,25 @@ img {
 
 #BookTitle {
   color: var(--cl-blue);
+  text-decoration: underline;
+  letter-spacing: 5px;
+  font-size: 30px;
+
+}
+
+.potter{
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/potter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#color-dark {
+  color: var(---cl-font-dark:);
 }
 /* ===Contact=== */
 
@@ -418,18 +437,23 @@ img {
   color: var(--cl-font-contrast-light);
 }
 
-.map-container-2{
+.map-container-2 {
   overflow:hidden;
   padding-bottom:56.25%;
   position:relative;
   height:0;
 }
-.map-container-2 iframe{
+.map-container-2 iframe {
   left:0;
   top:0;
   height:100%;
   width:100%;
   position:center;
+}
+
+#send {
+  background-color: var(--cl-blue);
+  color: var(--cl-white);
 }
 
 
