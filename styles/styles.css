@@ -384,7 +384,8 @@ img {
 /* ===Books=== */
 
 #title {
-  color: var(--cl-font-contrast-light);
+  color: var( --cl-font-dark);
+
 }
 
 .list-groupxs {
@@ -401,7 +402,7 @@ img {
 
 #BookTitle {
   color: var(--cl-blue);
-  text-decoration: underline;
+  text-decoration: none;
   letter-spacing: 5px;
   font-size: 30px;
 
@@ -419,7 +420,7 @@ img {
   background-position: center;
 }
 #color-dark {
-  color: var(---cl-font-dark:);
+  color: var(---cl-font-dark);
 }
 /* ===Contact=== */
 

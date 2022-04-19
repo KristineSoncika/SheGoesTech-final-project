@@ -1,5 +1,5 @@
 ///////////////////////////////////////
-//ADD COMENTS at LOCAL STORAGE
+//ADD COMENTS and create LOCAL STORAGE
 let itemList = document.getElementById('items'); 
 let form = document.getElementById('addForm');
 console.log(form);
@@ -31,7 +31,7 @@ function addItem(e){
     addToStorage(newItem); //šajā brīdī kaut kas array jau ir (vai nu tukšums vai komentārs)
 }
 function addToStorage(coment){
-  coments.push(coment); //ieliku iepriekš izveidotajā array 47 vai 53 rindiņa, liek array, lai varētu pārtaisīt par string un ieliekt locastorage
+  coments.push(coment); //ieliku iepriekš izveidotajā array 16 vai 20 rindiņa, liek array, lai varētu pārtaisīt par string un ieliekt locastorage
   localStorage.setItem('coments',JSON.stringify(coments)); //ieliek komentāru locastorage array ar komentāriem
 }
 
