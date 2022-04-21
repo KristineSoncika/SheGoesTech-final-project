@@ -457,6 +457,11 @@ input {
 
 /* === BOOKS === */
 
+<<<<<<< HEAD
+#title {
+  color: var( --cl-font-dark);
+
+=======
 /* === CONTACTS === */
 
 .contacts {
@@ -464,6 +469,7 @@ input {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+>>>>>>> main
 }
 
 .contacts h2,
@@ -477,7 +483,45 @@ input {
   font-weight: 700;
 }
 
+<<<<<<< HEAD
+#list-btn {
+  background-color: var(--cl-bg-dark);
+}
+
+#BookTitle {
+  color: var(--cl-blue);
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 30px;
+
+}
+
+.potter{
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../images/potter.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#color-dark {
+  color: var(---cl-font-dark);
+}
+/* ===Contact=== */
+
+
+#icons {
+  font-size: 4rem;
+  color: var(--cl-bg-light);
+}
+
+#icons:hover {
+=======
 .contacts a:hover i {
+>>>>>>> main
   color: var(--cl-blue);
 }
 
@@ -488,3 +532,34 @@ input {
 .map h2 {
   color: var(--cl-font-contrast-light);
 }
+<<<<<<< HEAD
+
+.map-container-2 {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+}
+.map-container-2 iframe {
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:center;
+}
+
+#send {
+  background-color: var(--cl-blue);
+  color: var(--cl-white);
+}
+
+
+
+/* ===Footer=== */
+
+.footer h2 {
+  color: var(--cl-font-contrast-light);
+}
+
+=======
+>>>>>>> main
