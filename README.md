@@ -23,7 +23,7 @@ A responsive website for an imaginary private library.
 - Scroll-to-top button (JS)
 - Slider (JS)
 - Acive-state navbar links (JS)
-- Search (JS)
+- Book search (JS)
 - Add comments(JS)
 - Subscribe for a newsletter (Node.js, Express, SQLite)
 - Send a message (Node.js, Express, SQLite)
