@@ -15,6 +15,7 @@
   --cl-font-contrast-dark: rgb(158, 115, 69);
   --cl-font-contrast-light: rgb(226, 174, 119);
   --cl-white: rgb(255, 255, 255);
+  --cl-error: rgb(163, 35, 35);
   --font-main: "Titillium Web", sans-serif;
   --font-special: "Dosis", sans-serif;
   --transition: all 0.5s;
@@ -243,11 +244,16 @@ input {
   display: none;
 }
 
+.error {
+  color: var(--cl-error);
+  font-size: 1rem;
+}
+
 /* === HOME === */
 
 /* =Hero= */
 .hero {
-  background-image: url("../images/hero.jpg");
+  background-image: url("/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -281,7 +287,7 @@ input {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0)
     ),
-    url("../images/news.jpg");
+    url("/news.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -293,7 +299,7 @@ input {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0)
     ),
-    url("../images/collection.jpg");
+    url("/collection.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -307,7 +313,7 @@ input {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0)
     ),
-    url("../images/join.jpg");
+    url("/join.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -358,19 +364,19 @@ input {
 }
 
 .cover-1 {
-  background-image: url("../images/book-1.jpg");
+  background-image: url("/book-1.jpg");
 }
 
 .cover-2 {
-  background-image: url("../images/book-2.jpeg");
+  background-image: url("/book-2.jpeg");
 }
 
 .cover-3 {
-  background-image: url("../images/book-3.png");
+  background-image: url("/book-3.png");
 }
 
 .cover-4 {
-  background-image: url("../images/book-4.jpeg");
+  background-image: url("/book-4.jpeg");
 }
 
 /* === ABOUT US === */
@@ -380,21 +386,21 @@ input {
 }
 
 .about-us-bg-1 {
-  background-image: url("../images/about-us-1.jpg");
+  background-image: url("/about-us-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about-us-bg-2 {
-  background-image: url("../images/about-us-2.jpg");
+  background-image: url("/about-us-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .about-us-bg-3 {
-  background-image: url("../images/about-us-3.jpg");
+  background-image: url("/about-us-3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -457,19 +463,13 @@ input {
 
 /* === BOOKS === */
 
-<<<<<<< HEAD
-#title {
-  color: var( --cl-font-dark);
-
-=======
 /* === CONTACTS === */
 
 .contacts {
-  background-image: url("../images/contacts.jpg");
+  background-image: url("/contacts.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
->>>>>>> main
 }
 
 .contacts h2,
@@ -483,45 +483,7 @@ input {
   font-weight: 700;
 }
 
-<<<<<<< HEAD
-#list-btn {
-  background-color: var(--cl-bg-dark);
-}
-
-#BookTitle {
-  color: var(--cl-blue);
-  text-decoration: none;
-  letter-spacing: 5px;
-  font-size: 30px;
-
-}
-
-.potter{
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0)
-    ),
-    url("../images/potter.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-#color-dark {
-  color: var(---cl-font-dark);
-}
-/* ===Contact=== */
-
-
-#icons {
-  font-size: 4rem;
-  color: var(--cl-bg-light);
-}
-
-#icons:hover {
-=======
 .contacts a:hover i {
->>>>>>> main
   color: var(--cl-blue);
 }
 
@@ -532,34 +494,3 @@ input {
 .map h2 {
   color: var(--cl-font-contrast-light);
 }
-<<<<<<< HEAD
-
-.map-container-2 {
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
-}
-.map-container-2 iframe {
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:center;
-}
-
-#send {
-  background-color: var(--cl-blue);
-  color: var(--cl-white);
-}
-
-
-
-/* ===Footer=== */
-
-.footer h2 {
-  color: var(--cl-font-contrast-light);
-}
-
-=======
->>>>>>> main

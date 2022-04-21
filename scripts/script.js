@@ -73,13 +73,13 @@ $(() => {
   //   3. removes parameters from URL if any
   url = url.substring(
     0,
-    url.indexOf("?") == -1 ? url.length : url.indexOf("?")
+    url.indexOf("?") === -1 ? url.length : url.indexOf("?")
   );
   //   4. selects file name
   url = url.substring(url.lastIndexOf("/") + 1);
   //   5. if file name is not available, set it to index.html
   if (url === "") {
-    url = "index.html";
+    url = "/index.html";
   }
   //   6. loop through nav-item links
   $(".nav-item a").each(function () {
@@ -91,6 +91,29 @@ $(() => {
       $(this).addClass("active-state");
     }
   });
+
+  // === Sign-up-message ===
+
+  $(".sign-up-btn").on("click", () => {
+    $(".sign-up").addClass("hide");
+    $(".sign-up-response").removeClass("hide");
+  });
+
+  // === Message-us-message ===
+
+  $(".message-us-btn").on("click", () => {
+    $("#message-us-form").addClass("hide");
+    $(".message-us-response").removeClass("hide");
+  });
+
+  //contacts//
+  //alert for Send button
+  // const btnSend = document.getElementById("send");
+  // btnSend.addEventListener("click", showMessage);
+
+  // function showMessage() {
+  //   alert("We Got Your message!\nWe Will answer in 2 to 5 days!\nThank You!");
+  // }
 
   //   === Slider ===
 
@@ -112,6 +135,7 @@ $(() => {
   const activeTop = (slideIndex) => {
     let dots = $(".dots-top .dot");
     for (let i = 0; i < dots.length; i++) {
+      console.log(dots[i]);
       dots[i].className = dots[i].className.replace(" dot-active", "");
     }
     dots[slideIndex - 1].className += " dot-active";
