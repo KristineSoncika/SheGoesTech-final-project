@@ -408,7 +408,6 @@ input {
   overflow: hidden;
   white-space: nowrap;
   font-size: 0;
-  /* border: 1px solid black; */
 }
 
 .slide {
@@ -457,33 +456,10 @@ input {
 
 /* === BOOKS === */
 
-<<<<<<< HEAD
 #title {
-  color: var( --cl-font-dark);
-
-=======
-/* === CONTACTS === */
-
-.contacts {
-  background-image: url("../images/contacts.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
->>>>>>> main
-}
-
-.contacts h2,
-.map h2,
-.message h2 {
-  font-size: 3rem;
-}
-
-.contacts a {
   color: var(--cl-font-dark);
-  font-weight: 700;
 }
 
-<<<<<<< HEAD
 #list-btn {
   background-color: var(--cl-bg-dark);
 }
@@ -493,10 +469,9 @@ input {
   text-decoration: none;
   letter-spacing: 5px;
   font-size: 30px;
-
 }
 
-.potter{
+.potter {
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.6),
@@ -510,18 +485,28 @@ input {
 #color-dark {
   color: var(---cl-font-dark);
 }
-/* ===Contact=== */
 
+/* === CONTACTS === */
 
-#icons {
-  font-size: 4rem;
-  color: var(--cl-bg-light);
+.contacts {
+  background-image: url("../images/contacts.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#icons:hover {
-=======
+.contacts h2,
+.map h2,
+.message h2 {
+  font-size: 3rem;
+}
+
+.contacts a {
+  color: var(--cl-font-dark);
+  font-weight: 700;
+}
+
 .contacts a:hover i {
->>>>>>> main
   color: var(--cl-blue);
 }
 
@@ -532,34 +517,3 @@ input {
 .map h2 {
   color: var(--cl-font-contrast-light);
 }
-<<<<<<< HEAD
-
-.map-container-2 {
-  overflow:hidden;
-  padding-bottom:56.25%;
-  position:relative;
-  height:0;
-}
-.map-container-2 iframe {
-  left:0;
-  top:0;
-  height:100%;
-  width:100%;
-  position:center;
-}
-
-#send {
-  background-color: var(--cl-blue);
-  color: var(--cl-white);
-}
-
-
-
-/* ===Footer=== */
-
-.footer h2 {
-  color: var(--cl-font-contrast-light);
-}
-
-=======
->>>>>>> main
